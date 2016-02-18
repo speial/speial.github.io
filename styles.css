@@ -1,0 +1,44 @@
+ *, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+ body, html
+ {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+ }
+
+ body
+ {
+  text-align: center;
+  padding-top: 3%;
+  background: #606060;
+  color: #ffffff;
+ } 
+
+ a, a:active { color: #ffffff }
+
+ img
+ {
+  max-width : 80%;
+  max-height: 80%;
+  border: 1px solid #000000;
+  margin-bottom: 10px;
+ }
+
+ @media (max-width: 600px)
+ {
+  img
+  {
+   max-width: 95%;
+  }
+ }
+
+ @media (max-height: 500px)
+ {
+  img
+  {
+   max-height: 10000%;
+  }
+ }
