@@ -12,7 +12,7 @@
  body
  {
   text-align: center;
-  padding-top: 3%;
+  padding-top   : 3%;
   background: #606060;
   color: #ffffff;
  } 
@@ -24,6 +24,7 @@
   max-width : 80%;
   max-height: 80%;
   border: 1px solid #000000;
+  margin-top   : 40px;
   margin-bottom: 10px;
  }
 
@@ -42,3 +43,8 @@
    max-height: 10000%;
   }
  }
+
+.caption
+{
+ margin-bottom: 20px;
+}
