@@ -15,17 +15,16 @@
   padding-top   : 3%;
   background: #606060;
   color: #ffffff;
-  display: flex;
  } 
 
  a, a:active { color: #ffffff }
 
  img
  {
-  max-width : 750px;
+  max-width : 70%;
   border: 1px solid #000000;
   margin-top   : 40px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
  }
@@ -66,3 +65,4 @@
  padding-top: 100px;
  padding-bottom: 100px;
 }
+
