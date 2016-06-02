@@ -29,9 +29,25 @@
   margin-right: auto;
  }
 
+.caption
+{
+ margin-bottom: 20px;
+ max-width: 70%;
+ display: inline-block; 
+ text-align: left;
+}
+
+@media (min-width: 900px)
+{
+ .caption
+ {
+  max-width: 700px;
+ }
+}
+
  @media (max-width: 800px)
  {
-  img
+  img, .caption
   {
    max-width: 80%;
   }
@@ -39,7 +55,7 @@
 
  @media (max-width: 600px)
  {
-  img
+  img, .caption
   {
    max-width: 95%;
   }
@@ -47,17 +63,22 @@
 
  @media (max-height: 500px)
  {
-  img
+  img, .caption
   {
    max-height: 10000%;
   }
  }
 
-.caption
+
+.imglink
 {
- margin-bottom: 20px;
- max-width: 700px;
- display: inline-block; 
+ font-size: 0;
+}
+
+.imglink:before, .imglink:after
+{
+ content: '';
+ display: block;
 }
 
 .footer
