@@ -29,6 +29,22 @@
   margin-right: auto;
  }
 
+.header
+{
+ text-align: left;
+ padding-left: 3%;
+}
+
+.header a
+{
+ text-decoration: none;
+}
+
+.header a:hover
+{
+ border-bottom: 1px solid #ffffff;
+}
+
 .caption
 {
  margin-bottom: 20px;

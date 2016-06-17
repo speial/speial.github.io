@@ -2,15 +2,16 @@
 
 <?php
 
-$d='../2012-12-01-flyer_woman';
 $f='index';
 
 $dirs = array_filter(glob('../2*'), 'is_dir');
 
+$dir=$dirs[4];
+
 // print_r($dirs); die();
 
-$page=createPage($dirs[0],$f);
-file_put_contents("$d/$f.html",$page);
+$page=createPage($dir,$f);
+file_put_contents("$dir/$f.html",$page);
 
 echo json_last_error();
 
