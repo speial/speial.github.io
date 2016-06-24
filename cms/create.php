@@ -17,7 +17,7 @@ foreach ($dirs as $dir)
 	}
 	else
 	{
-		$old_page=file_get_contents("$dir/$f.html");
+		$old_page=@file_get_contents("$dir/$f.html");
 		if ($new_page['page']===$old_page)
 		{
 			echo "No difference";
@@ -25,7 +25,8 @@ foreach ($dirs as $dir)
 		else
 		{
 			file_put_contents("$dir/$f.html",$new_page);
-			echo "UPDATED";
+			if (!$old_page) echo "CREATED";
+			else            echo "UPDATED";
 		}
 	}
 	echo "\n";
@@ -41,7 +42,7 @@ echo "Update successful\n";
 function createPage($d,$f)
 {
 	if (!file_exists("$d/$f.json")) return ['info'=>'no index.json'];
-	$tPage=file_get_contents('page.html');
+	$tPage=file_get_contents('templates/page.html');
 	$json=file_get_contents("$d/$f.json");
 	$content=json_decode($json,true);
 	$error=json_last_error();
@@ -52,7 +53,7 @@ function createPage($d,$f)
 	$entries='';
 	foreach ($content['entries'] as $entry)
 	{
-		$tEntry=file_get_contents('entry.html');
+		$tEntry=file_get_contents('templates/entry.html');
 		replace($tEntry,$entry);
 		$entries.=$tEntry;
 	}
@@ -74,7 +75,7 @@ function replace(&$content,$replacements)
 function getFileTemplate($key,$val)
 {
 	if ($val=='') return '';
-	$t=file_get_contents('image.html');
+	$t=file_get_contents('templates/image.html');
 	$t=str_ireplace('{'.$key.'}',$val,$t);
 	return $t;
 }	
