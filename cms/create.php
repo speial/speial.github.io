@@ -13,6 +13,7 @@ foreach ($dirs as $dir)
 	if (isset($new_page['info']))
 	{
 		echo ($new_page['info']);
+		if (isset($new_page['fatal_error'])) die("\nSTOPPING\n");
 	}
 	else
 	{
@@ -30,10 +31,12 @@ foreach ($dirs as $dir)
 	echo "\n";
 }
 
-die();
+echo "Update successful\n";
 
+// -----------------------------------------------------------------------------
+// Functions
+// -----------------------------------------------------------------------------
 
-echo json_last_error();
 
 function createPage($d,$f)
 {
@@ -41,6 +44,8 @@ function createPage($d,$f)
 	$tPage=file_get_contents('page.html');
 	$json=file_get_contents("$d/$f.json");
 	$content=json_decode($json,true);
+	$error=json_last_error();
+	if ($error) return ['info'=>'JSON Error','fatal_error'=>1];
 
 	$content['path']=substr($d,2);
 
@@ -60,7 +65,16 @@ function replace(&$content,$replacements)
 {
 	foreach($replacements as $key=>$val)
 	{
+		if ($key=='image') $val=getFileTemplate($key,$val);
 		if (gettype($val)!='string') continue;
 		$content=str_ireplace('{'.$key.'}',$val,$content);
 	}
 }
+
+function getFileTemplate($key,$val)
+{
+	if ($val=='') return '';
+	$t=file_get_contents('image.html');
+	$t=str_ireplace('{'.$key.'}',$val,$t);
+	return $t;
+}	

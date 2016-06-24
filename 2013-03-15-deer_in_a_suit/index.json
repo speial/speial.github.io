@@ -2,7 +2,11 @@
  "title"   : "Deer in a suit",
  "og_image": "deer_in_a_suit.jpg",
  "entries" : [
+  { "image": "",
+    "text" : "<div class=description><p>Two small pieces from March 2013. Made from a flyer of an exhibition series called Arty Party.</p><p>After I tried tearing the paper in \"Bird's perspective\", I returned to cutting it for these pieces. But I kept the idea to cut it into shapes instead of straight lines.</p><p>The motif of the female deer in a dress made a comeback years later, when I made a 1m tall version of it.</p></div>" },
   { "image": "deer_in_a_suit.jpg",
-    "text" : "" }
+    "text" : "Deer in a suit" },
+  { "image": "deer_in_a_dress.jpg",
+    "text" : "Deer in a dress" }
  ]
 }

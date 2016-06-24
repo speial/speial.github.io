@@ -60,6 +60,11 @@
  content: "- ";
 }
 
+.description
+{
+ margin-top: 80px;
+}
+
 .caption
 {
  margin-bottom: 20px;
