@@ -17,7 +17,11 @@
   color: #ffffff;
  } 
 
- a, a:active { color: #ffffff }
+ a, a:active
+ {
+  color: #ffffff;
+  outline: 0;
+ }
 
  img
  {
@@ -37,6 +41,7 @@
 
 .header a
 {
+ color: #a0a0a0;
  text-decoration: none;
 }
 
@@ -48,7 +53,11 @@
 .header .title
 {
  color: #a0a0a0;
- font-size: 150%;
+}
+
+.header .title::before
+{
+ content: "- ";
 }
 
 .caption
