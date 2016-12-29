@@ -1,0 +1,8 @@
+{
+ "title"   : "Girl with a secret",
+ "og_image": "girl_with_a_secret.jpg",
+ "entries" : [
+  { "image": "girl_with_a_secret.jpg",
+    "text" : "A small piece from July 2013"}
+ ]
+}
