@@ -1,0 +1,10 @@
+{
+	"title"   : "Small Things",
+	"og_image": "small_things.jpg",
+	"entries" : [
+		{
+			"image": "small_things.jpg",
+			"text" : "<p>A <a href='http://gudbergnerger.com/' target=_blank>Gudberg Nerger</a> catalogue torn apart and reassembled.</p>"
+		}
+	]
+}
