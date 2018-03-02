@@ -1,0 +1,14 @@
+{
+	"title"   : "The Catalogue",
+	"og_image": "catalogue-front.jpg",
+	"entries" : [
+		{
+			"image": "catalogue-front.jpg",
+			"text" : "<p>This catalogue accompanied the Don't Wake Daddy exhibition.</p>"
+		},
+		{
+			"image": "catalogue-special_guest.jpg",
+			"text" : "<p>Since they did not know who I am, they dubbed me Special Guest.</p>"
+		}
+	]
+}
